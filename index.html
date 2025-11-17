@@ -4,8 +4,18 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Vận chuyển Việt ↔ Ấn • Nhanh • An toàn • Giá tốt</title>
-<!-- Favicon (ảnh nhỏ trên tab) -->
+<!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="https://scontent.fsgn15-1.fna.fbcdn.net/v/t39.30808-6/584672541_122109907635039084_6442112115531869416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=yUl1Jsn8RQEQ7kNvwFm0nYN&_nc_oc=AdnbHngpEzey0UW4p2EyVpdBe_tWI_7h5tgT00_2ZP94TYh1rYOJA_P-raiFlkezdnNSRkBtK96tCs_YYrZkxVPU&_nc_zt=23&_nc_ht=scontent.fsgn15-1.fna&_nc_gid=FFXMLS176DlvFUAFW2dSxA&oh=00_AfiEWu_g0iLQGgKchOULhu183c81rpJ0y0rDsJiy4KIl1w&oe=6920C5A5">
+
+<!-- Open Graph – Sửa cái preview Facebook/Messenger hiện đẹp, không còn icon điện thoại nữa -->
+<meta property="og:title" content="Vận chuyển Việt ↔ Ấn • Nhanh • An toàn • Giá tốt" />
+<meta property="og:description" content="Vận chuyển hai chiều Việt Nam - Ấn Độ chỉ 3-6 ngày ✈ Giá từ 190k/kg • Tracking online • Hỗ trợ 24/7" />
+<meta property="og:image" content="https://scontent.fsgn15-1.fna.fbcdn.net/v/t39.30808-6/584672541_122109907635039084_6442112115531869416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=yUl1Jsn8RQEQ7kNvwFm0nYN&_nc_oc=AdnbHngpEzey0UW4p2EyVpdBe_tWI_7h5tgT00_2ZP94TYh1rYOJA_P-raiFlkezdnNSRkBtK96tCs_YYrZkxVPU&_nc_ht=scontent.fsgn15-1.fna&oh=00_AfiEWu_g0iLQGgKchOULhu183c81rpJ0y0rDsJiy4KIl1w&oe=6920C5A5" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:url" content="https://vanchuyenvietan.com/" />
+<meta property="og:type" content="website" />
+
 <style>
 :root{--navy:#04263a;--gold:#c8a93a;--muted:#6b7882;--bg:#fff;--card:#f7f9fb;--radius:14px}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -78,27 +88,23 @@ textarea:focus::placeholder{opacity:0}
       <a class="btn btn-outline" href="#price" data-lang="price">Bảng giá</a>
     </nav>
   </header>
-
   <section class="hero">
     <div class="hero-card">
       <h2 data-lang="hero_title">Vận chuyển hai chiều Việt Nam ↔ Ấn Độ</h2>
       <p data-lang="hero_desc">Nhận sỉ & lẻ, gom hàng, đóng gói, khai báo hải quan. Thời gian 3–6 ngày. Tracking online & hỗ trợ 24/7.</p>
     </div>
-
     <aside class="hero-card right">
       <h3 style="margin-top:0" data-lang="tracking_title">Tracking & Liên hệ</h3>
       <label class="muted" data-lang="tracking_label">Mã vận đơn (cách nhau bằng dấu phẩy hoặc xuống dòng)</label>
       <textarea id="tracking" placeholder="VD: VN123,VN124,VN125" data-lang-placeholder="tracking_placeholder"></textarea>
       <button class="btn btn-primary" style="margin-top:8px;width:100%" onclick="checkTracking()" data-lang="tracking_btn">Tra cứu</button>
       <div id="result" style="margin-top:12px"></div>
-
       <div style="margin-top:18px;display:flex;gap:8px">
         <a class="btn" href="https://wa.me/84384508680" style="flex:1;background:#25D366;color:#fff;text-align:center" data-lang="whatsapp">WhatsApp</a>
         <a class="btn" href="tel:+84384508680" style="flex:1;background:var(--navy);color:#fff;text-align:center" data-lang="call">Gọi ngay</a>
       </div>
     </aside>
   </section>
-
   <section class="features">
     <div class="left">
       <h2 data-lang="advantages">Ưu điểm</h2>
@@ -108,7 +114,6 @@ textarea:focus::placeholder{opacity:0}
         <li>Kho ở 2 nước, hỗ trợ 24/7</li>
         <li>Bồi thường minh bạch</li>
       </ul>
-
       <h2 style="margin-top:16px" data-lang="process">Quy trình</h2>
       <ol class="process" data-lang-list="process_list">
         <li>Nhận yêu cầu — Báo giá</li>
@@ -118,7 +123,6 @@ textarea:focus::placeholder{opacity:0}
         <li>Giao tận nơi — Xác nhận & feedback</li>
       </ol>
     </div>
-
     <aside class="right">
       <h3 id="price" data-lang="price_table">Bảng giá tham khảo</h3>
       <div class="price">
@@ -130,23 +134,19 @@ textarea:focus::placeholder{opacity:0}
       </div>
     </aside>
   </section>
-
   <footer style="margin-top:24px;text-align:center">
     <div class="muted" data-lang="footer_copyright">© Vận chuyển Việt ↔ Ấn</div>
     <div class="muted" data-lang="footer_hotline">Hotline: 038 450 8680</div>
   </footer>
 </div>
-
 <div class="contact-bubble">
   <a href="https://wa.me/84384508680" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"><span data-lang="whatsapp">WhatsApp</span></a>
   <a href="https://zalo.me/0384508680" target="_blank"><img src="https://i.pinimg.com/736x/35/b0/e7/35b0e7f4986056b70c8a070e64830243.jpg" alt="Zalo"><span data-lang="zalo">Zalo</span></a>
   <a href="tel:+84384508680"><img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Call"><span data-lang="call">Gọi ngay</span></a>
   <a href="https://m.me/yumi.sky.147" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Messenger"><span data-lang="messenger">Messenger</span></a>
 </div>
-
 <script>
 const API_URL="https://api.sheetbest.com/sheets/25152aca-5cdc-4429-8c26-5223f4ee46ad";
-
 const translations={
   vi:{
     title:"Vận chuyển Việt ↔ Ấn",
@@ -227,7 +227,6 @@ const translations={
     messenger:"Messenger"
   }
 };
-
 let currentLang="vi";
 function switchLang(lang){
   if(currentLang===lang)return;
@@ -250,7 +249,6 @@ function switchLang(lang){
   document.querySelectorAll('.lang-switch button').forEach(btn=>btn.classList.toggle('active',btn.dataset.langCode===lang));
 }
 document.querySelectorAll('.lang-switch button').forEach(btn=>btn.addEventListener('click',()=>switchLang(btn.dataset.langCode)));
-
 async function checkTracking(){
   const e=document.getElementById("tracking").value.trim(),t=document.getElementById("result");
   if(t.innerHTML="",!e)return void alert(translations[currentLang].tracking_label||translations.vi.tracking_label);
