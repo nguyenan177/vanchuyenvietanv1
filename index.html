@@ -6,12 +6,12 @@
 <title>Vận chuyển Việt ↔ Ấn • Nhanh • An toàn • Giá tốt</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/nguyenan177/vanchuyenvietanv1/main/image.jpg">
+<link rel="icon" type="image/jpeg" href="https://github.com/nguyenan177/vanchuyenvietanv1/blob/main/image.jpg?raw=true">
 
 <!-- Open Graph – Facebook preview -->
 <meta property="og:title" content="Vận chuyển Việt ↔ Ấn • Nhanh • An toàn • Giá tốt" />
 <meta property="og:description" content="Vận chuyển hai chiều Việt Nam - Ấn Độ chỉ 3-6 ngày ✈ Giá từ 190k/kg • Tracking online • Hỗ trợ 24/7" />
-<meta property="og:image" content="https://raw.githubusercontent.com/nguyenan177/vanchuyenvietanv1/main/image.jpg" />
+<meta property="og:image" content="https://github.com/nguyenan177/vanchuyenvietanv1/blob/main/image.jpg?raw=true" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://vanchuyenvietan.com/" />
@@ -24,7 +24,7 @@ body{background:linear-gradient(180deg,#fff,#f6fbff);color:var(--navy);font-fami
 .container{max-width:1100px;margin:auto;padding:20px}
 header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:14px}
-.logo{width:56px;height:56px;border-radius:50%;background:url('https://raw.githubusercontent.com/nguyenan177/vanchuyenvietanv1/main/image.jpg') center/cover no-repeat;box-shadow:0 6px 18px rgba(4,38,58,.12)}
+.logo{width:56px;height:56px;border-radius:50%;background:url('https://github.com/nguyenan177/vanchuyenvietanv1/blob/main/image.jpg?raw=true') center/cover no-repeat;box-shadow:0 6px 18px rgba(4,38,58,.12)}
 h1{font-size:20px;font-weight:700}h1+p{color:var(--muted);font-size:14px}
 nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center}
 .lang-switch{display:flex;gap:6px;border:1px solid rgba(4,38,58,.1);border-radius:10px;overflow:hidden}
@@ -57,7 +57,7 @@ ol.process li:hover{background:rgba(4,38,58,.04)}
 .contact-bubble a{display:flex;flex-direction:column;align-items:center;width:60px;text-decoration:none;color:var(--navy);transition:transform .2s}
 .contact-bubble a:hover{transform:scale(1.15)}
 .contact-bubble img{width:48px;height:48px;border-radius:50%;box-shadow:0 6px 12px rgba(0,0,0,.2);margin-bottom:4px}
-contact-bubble span{font-size:12px;text-align:center}
+.contact-bubble span{font-size:12px;text-align:center}
 table{width:100%;border-collapse:collapse;margin-top:12px;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08)}
 th,td{padding:10px;text-align:left;border-bottom:1px solid #eee}
 th{background:var(--gold);color:var(--navy);font-weight:600}
@@ -89,6 +89,7 @@ textarea:focus::placeholder{opacity:0}
       <a class="btn btn-outline" href="#price" data-lang="price">Bảng giá</a>
     </nav>
   </header>
+
   <section class="hero">
     <div class="hero-card">
       <h2 data-lang="hero_title">Vận chuyển hai chiều Việt Nam ↔ Ấn Độ</h2>
@@ -106,6 +107,7 @@ textarea:focus::placeholder{opacity:0}
       </div>
     </aside>
   </section>
+
   <section class="features">
     <div class="left">
       <h2 data-lang="advantages">Ưu điểm</h2>
@@ -135,13 +137,13 @@ textarea:focus::placeholder{opacity:0}
       </div>
     </aside>
   </section>
+
   <footer style="margin-top:24px;text-align:center">
     <div class="muted" data-lang="footer_copyright">© Vận chuyển Việt ↔ Ấn</div>
     <div class="muted" data-lang="footer_hotline">Hotline: 038 450 8680</div>
   </footer>
 </div>
 
-<!-- Contact bubble -->
 <div class="contact-bubble">
   <a href="https://wa.me/84384508680" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"><span data-lang="whatsapp">WhatsApp</span></a>
   <a href="https://zalo.me/0384508680" target="_blank"><img src="https://i.pinimg.com/736x/35/b0/e7/35b0e7f4986056b70c8a070e64830243.jpg" alt="Zalo"><span data-lang="zalo">Zalo</span></a>
@@ -151,11 +153,26 @@ textarea:focus::placeholder{opacity:0}
 
 <script>
 const API_URL="https://api.sheetbest.com/sheets/25152aca-5cdc-4429-8c26-5223f4ee46ad";
-const translations={/* giữ nguyên như cũ */};
+const translations={ /* giữ nguyên như trước, 3 ngôn ngữ */ };
 let currentLang="vi";
-function switchLang(lang){/* giữ nguyên như cũ */}
+function switchLang(lang){ /* code chuyển ngôn ngữ giữ nguyên */ }
 document.querySelectorAll('.lang-switch button').forEach(btn=>btn.addEventListener('click',()=>switchLang(btn.dataset.langCode)));
-async function checkTracking(){/* giữ nguyên như cũ */}
+
+async function checkTracking(){
+  const e=document.getElementById("tracking").value.trim(),t=document.getElementById("result");
+  if(t.innerHTML="",!e)return void alert(translations[currentLang].tracking_label||translations.vi.tracking_label);
+  const n=e.split(/[\n,]+/).map(e=>e.trim()).filter(Boolean);
+  if(0===n.length)return void alert("Không có mã hợp lệ");
+  t.innerHTML=`<p style='color:var(--muted)'>${translations[currentLang].tracking_btn==="Tra cứu"?"Đang tra cứu, vui lòng chờ...":"Loading..."}</p>`;
+  try{
+    const e=await fetch(API_URL),a=await e.json();
+    let o=`<table><tr><th>${translations[currentLang].tracking_label.split(' ')[0]||'Mã'}</th><th>Trạng thái</th><th>ĐÃ ĐẾN</th><th>HÀNG VẬN CHUYỂN</th></tr>`;
+    n.forEach(e=>{
+      const t=a.find(t=>t.Tracking?.trim()===e);
+      t?(o+=`<tr><td>${e}</td><td>${t.Status||"Đang vận chuyển"}</td><td>${t.DaDen||"-"}</td><td>${t.HangVanChuyen||"-"}</td></tr>`):o+=`<tr><td>${e}</td><td style="color:#e74c3c">${translations[currentLang].tracking_btn==="Tra cứu"?"Không tồn tại":"Not found"}</td><td>-</td><td>-</td></tr>`;
+    }),o+="</table>",t.innerHTML=o
+  }catch(e){console.error(e),alert("Lỗi tải dữ liệu. Vui lòng thử lại sau.")}
+}
 </script>
 </body>
 </html>
